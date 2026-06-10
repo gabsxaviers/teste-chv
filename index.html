@@ -16,7 +16,8 @@
 <header class="header" id="header">
   <div class="wrap header__inner">
     <a href="#top" class="brand" aria-label="CHV Geossintéticos — início">
-      <img src="assets/chv-logo-trans.png" alt="CHV Geossintéticos" />
+      <img class="brand__logo brand__logo--dark" src="assets/chv-logo-trans.png" alt="CHV Geossintéticos" />
+      <img class="brand__logo brand__logo--light" src="assets/chv-logo-white.png" alt="CHV Geossintéticos" />
       <span class="brand__col">
         <span class="brand__name">CHV<span> Geossintéticos</span></span>
       </span>
@@ -68,39 +69,38 @@
 
 <main id="top">
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO (fundo de vídeo) ============ -->
 <section class="hero">
-  <div class="wrap hero__grid">
-    <div class="hero__copy">
-      <span class="hero__badge reveal"><span class="dot"></span> Impermeabilização & contenção de alto desempenho</span>
-      <h1 class="reveal text-balance" data-d="1">Geossintéticos do <em>projeto à instalação</em>, com garantia de estanqueidade.</h1>
-      <p class="hero__lead reveal text-pretty" data-d="2">A CHV entrega soluções completas em geomembranas e geossintéticos — engenharia, fornecimento, instalação certificada e ensaios de qualidade — para mineração, saneamento, agronegócio e infraestrutura.</p>
-      <div class="hero__cta reveal" data-d="3">
-        <a href="#contato" class="btn btn--primary btn--lg">Solicitar orçamento
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#servicos" class="btn btn--ghost btn--lg">Ver serviços</a>
-      </div>
-      <div class="hero__stats reveal" data-d="4">
-        <div class="hero__stat"><div class="n">+15<span>anos</span></div><div class="l">de atuação em campo</div></div>
-        <div class="hero__stat"><div class="n">+500</div><div class="l">obras executadas</div></div>
-        <div class="hero__stat"><div class="n">100%</div><div class="l">soldas com ensaio</div></div>
-      </div>
-    </div>
+  <!-- camada de fundo: placeholder animado (visível enquanto o vídeo real não é adicionado) -->
+  <div class="hero__bg" aria-hidden="true"></div>
+  <!-- VÍDEO DAS OBRAS — assets/hero-obras.mp4 -->
+  <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="">
+    <source src="assets/hero-obras.mp4" type="video/mp4" />
+  </video>
+  <div class="hero__overlay" aria-hidden="true"></div>
 
-    <div class="hero__media reveal" data-d="2">
-      <div class="ph" data-label="Foto — instalação de geomembrana em obra"></div>
-      <div class="hero__float">
-        <div class="ic">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-        </div>
-        <div>
-          <div class="t">Análise geoelétrica</div>
-          <div class="s">Detecção de vazamentos com precisão milimétrica</div>
-        </div>
-      </div>
+  <div class="wrap hero__inner">
+    <span class="hero__badge"><span class="dot"></span> Impermeabilização &amp; contenção de alto desempenho</span>
+    <h1 class="text-balance">Geossintéticos do <em>projeto à instalação</em>, com garantia de estanqueidade.</h1>
+    <p class="hero__lead text-pretty">Soluções completas em geomembranas e geossintéticos — engenharia, fornecimento, instalação certificada e ensaios de qualidade — para mineração, saneamento, agronegócio e infraestrutura.</p>
+    <div class="hero__cta">
+      <a href="#produtos" class="btn btn--primary btn--lg">Ver produtos por segmento
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#contato" class="btn btn--glass btn--lg">Falar com especialista</a>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat"><div class="n">+15<span>anos</span></div><div class="l">de atuação em campo</div></div>
+      <div class="hero__stat"><div class="n">+500</div><div class="l">obras executadas</div></div>
+      <div class="hero__stat"><div class="n">100%</div><div class="l">soldas com ensaio</div></div>
     </div>
   </div>
+
+  <!-- indicador de scroll -->
+  <a href="#servicos" class="hero__scroll" aria-label="Rolar para ver mais">
+    <span class="hero__scroll-label">Role</span>
+    <span class="hero__mouse"><span class="hero__wheel"></span></span>
+  </a>
 </section>
 
 <!-- ============ CLIENTES ============ -->
@@ -317,9 +317,9 @@
           <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"/></svg></span>
           <span><span class="k">WhatsApp</span><span class="v">(19) 99392-4565</span></span>
         </a>
-        <a class="cl-item" href="/cdn-cgi/l/email-protection#65060a0b1104110a25060d1302000a16160c0b1100110c060a164b060a084b0717">
+        <a class="cl-item" href="/cdn-cgi/l/email-protection#14777b7a6075607b54777c6273717b67677d7a6071607d777b673a777b793a7666">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
-          <span><span class="k">E-mail</span><span class="v"><span class="__cf_email__" data-cfemail="54373b3a2035203b14373c2233313b27273d3a2031203d373b277a373b397a3626">[email&#160;protected]</span></span></span>
+          <span><span class="k">E-mail</span><span class="v"><span class="__cf_email__" data-cfemail="96f5f9f8e2f7e2f9d6f5fee0f1f3f9e5e5fff8e2f3e2fff5f9e5b8f5f9fbb8f4e4">[email&#160;protected]</span></span></span>
         </a>
         <a class="cl-item" href="https://www.instagram.com/chv.geossinteticos/" target="_blank" rel="noopener">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
@@ -384,7 +384,7 @@
         <div class="footer__social">
           <a href="https://www.instagram.com/chv.geossinteticos/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://wa.me/5519993924565" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.5-5.6c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4z"/></svg></a>
-          <a href="/cdn-cgi/l/email-protection#e4878b8a9085908ba4878c9283818b97978d8a9081908d878b97ca878b89ca8696" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
+          <a href="/cdn-cgi/l/email-protection#5f3c30312b3e2b301f3c3729383a302c2c36312b3a2b363c302c713c3032713d2d" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
         </div>
       </div>
       <div class="footer__col">
@@ -412,7 +412,7 @@
         <ul>
           <li><a href="tel:+5519998325428">(19) 99832-5428</a></li>
           <li><a href="https://wa.me/5519993924565">WhatsApp: (19) 99392-4565</a></li>
-          <li><a href="/cdn-cgi/l/email-protection#0a6965647e6b7e654a69627c6d6f65797963647e6f7e6369657924696567246878"><span class="__cf_email__" data-cfemail="a6c5c9c8d2c7d2c9e6c5ced0c1c3c9d5d5cfc8d2c3d2cfc5c9d588c5c9cb88c4d4">[email&#160;protected]</span></a></li>
+          <li><a href="/cdn-cgi/l/email-protection#d0b3bfbea4b1a4bf90b3b8a6b7b5bfa3a3b9bea4b5a4b9b3bfa3feb3bfbdfeb2a2"><span class="__cf_email__" data-cfemail="294a46475d485d46694a415f4e4c465a5a40475d4c5d404a465a074a4644074b5b">[email&#160;protected]</span></a></li>
           <li><a href="#">Cidade / UF — placeholder</a></li>
         </ul>
       </div>
